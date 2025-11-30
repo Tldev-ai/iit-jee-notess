@@ -150,15 +150,15 @@
                 <button onclick="switchTab('math')" id="btn-math" class="tab-btn px-6 py-2 rounded-full font-bold bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 transition">Maths</button>
             </div>
 
-            <div class="relative min-h-[300px] md:min-h-[500px]">
+            <div class="relative min-h-[400px] md:min-h-[500px]">
                 
                 <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
                     <script>
                         for(let i=2; i<=6; i++){
-                            // Changed to aspect-[3/4] to fit vertical notes perfectly
+                            // RESTORED TO LARGE SIZE: min-w-[80%] mobile, min-w-[40%] desktop
                             document.write(`
-                            <div class="min-w-[70%] md:min-w-[25%] aspect-[3/4] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.02] transition duration-300">
-                                <img src="p${i}.jpg" class="w-full h-full object-cover" alt="Physics Sample ${i}">
+                            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
+                                <img src="p${i}.jpg" class="w-full h-auto" alt="Physics Sample ${i}">
                             </div>`);
                         }
                     </script>
@@ -168,8 +168,8 @@
                     <script>
                         for(let i=2; i<=6; i++){
                             document.write(`
-                            <div class="min-w-[70%] md:min-w-[25%] aspect-[3/4] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.02] transition duration-300">
-                                <img src="c${i}.jpg" class="w-full h-full object-cover" alt="Chemistry Sample ${i}">
+                            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
+                                <img src="c${i}.jpg" class="w-full h-auto" alt="Chemistry Sample ${i}">
                             </div>`);
                         }
                     </script>
@@ -179,8 +179,8 @@
                     <script>
                         for(let i=2; i<=6; i++){
                             document.write(`
-                            <div class="min-w-[70%] md:min-w-[25%] aspect-[3/4] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.02] transition duration-300">
-                                <img src="m${i}.jpg" class="w-full h-full object-cover" alt="Maths Sample ${i}">
+                            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
+                                <img src="m${i}.jpg" class="w-full h-auto" alt="Maths Sample ${i}">
                             </div>`);
                         }
                     </script>
