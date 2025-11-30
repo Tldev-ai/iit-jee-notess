@@ -93,7 +93,7 @@
             <div class="relative w-full max-w-2xl mx-auto rounded-xl shadow-2xl overflow-hidden mb-8 aspect-video border-4 border-white">
                 <div class="flex transition-transform duration-500 ease-out h-full" id="hero-slider">
                     <div class="min-w-full h-full bg-gray-200 flex items-center justify-center relative">
-                        <img src="m1.jpg" alt="Physics Note Teaser" class="w-full h-full object-cover">
+                        <img src="p1.jpg" alt="Physics Note Teaser" class="w-full h-full object-cover">
                         <div class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 text-sm rounded backdrop-blur-sm">Clean Diagrams</div>
                     </div>
                     <div class="min-w-full h-full bg-gray-200 flex items-center justify-center relative">
@@ -153,22 +153,22 @@
             <div class="relative min-h-[300px] md:min-h-[400px]">
                 <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4">
                     <script>
-                        for(let i=1; i<=5; i++){
-                            document.write(`<div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white"><img src="https://placehold.co/600x800/EEE/4F46E5?text=Physics+Page+${i}" class="w-full h-auto" alt="Physics Sample ${i}"></div>`);
+                        for(let i=2; i<=6; i++){
+                            document.write(`<div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white"><img src="p${i}.jpg" class="w-full h-auto" alt="Physics Sample ${i}"></div>`);
                         }
                     </script>
                 </div>
                 <div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4">
                     <script>
-                        for(let i=1; i<=5; i++){
-                            document.write(`<div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white"><img src="https://placehold.co/600x800/FFF8E1/F59E0B?text=Chem+Page+${i}" class="w-full h-auto" alt="Chemistry Sample ${i}"></div>`);
+                        for(let i=2; i<=6; i++){
+                            document.write(`<div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white"><img src="c${i}.jpg" class="w-full h-auto" alt="Chemistry Sample ${i}"></div>`);
                         }
                     </script>
                 </div>
                 <div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4">
                     <script>
-                        for(let i=1; i<=5; i++){
-                            document.write(`<div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white"><img src="https://placehold.co/600x800/ECFDF5/10B981?text=Maths+Page+${i}" class="w-full h-auto" alt="Maths Sample ${i}"></div>`);
+                        for(let i=2; i<=6; i++){
+                            document.write(`<div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white"><img src="m${i}.jpg" class="w-full h-auto" alt="Maths Sample ${i}"></div>`);
                         }
                     </script>
                 </div>
@@ -446,7 +446,7 @@
     </a>
 
     <script>
-        // 1. JEE 2026 Countdown
+        // 1. JEE Countdown
         const jeeDate = new Date("Jan 21, 2026 00:00:00").getTime();
         const daysEl = document.getElementById("days");
         const hoursEl = document.getElementById("hours");
@@ -508,4 +508,4 @@
         }
     </script>
 </body>
-</html>
+</html>xs
