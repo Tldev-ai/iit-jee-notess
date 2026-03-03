@@ -187,16 +187,20 @@
 
             <div class="relative min-h-[400px] md:min-h-[500px]">
                 
-               <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
-    <script>
-        for(let i=2; i<=6; i++){
-            document.write(`
-            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
-                <img src="ppp${i}.jpg" class="w-full h-auto" alt="Physics Sample ${i}">
-            </div>`);
-        }
-    </script>
-</div>
+               <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"></div>
+
+<script>
+const phyContainer = document.getElementById("phy-slides");
+
+for (let i = 2; i <= 6; i++) {
+    const div = document.createElement("div");
+    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
+
+    div.innerHTML = `<img src="ppp${i}.jpg" class="w-full h-auto" alt="Physics Sample ${i}">`;
+
+    phyContainer.appendChild(div);
+}
+</script>
 
 <div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
     <script>
