@@ -216,12 +216,17 @@ for (let i = 2; i <= 6; i++) {
 <div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
     
     <script>
-        // Only one sample mentioned: mmm2
-        document.write(`
-        <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
-            <img src="mmm2.jpg" class="mx-auto max-h-[450px] w-auto object-contain" alt="Maths Sample 2">
-        </div>`);
-    </script>
+const mathContainer = document.getElementById("math-slides");
+
+for (let i = 2; i <= 2; i++) {  // only one image mmm2
+    const div = document.createElement("div");
+    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
+
+    div.innerHTML = `<img src="mmm${i}.jpg" class="w-full h-auto" alt="Maths Sample ${i}">`;
+
+    mathContainer.appendChild(div);
+}
+</script>
 </div>
                 
                 <p class="text-center text-xs text-gray-400 mt-2">← Swipe to see more pages →</p>
