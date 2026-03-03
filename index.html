@@ -187,38 +187,37 @@
 
             <div class="relative min-h-[400px] md:min-h-[500px]">
                 
-                <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
-                    <script>
-                        for(let i=2; i<=6; i++){
-                            document.write(`
-                            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
-                                <img src="ppp${i}.jpg" class="w-full h-auto" alt="Physics Sample ${i}">
-                            </div>`);
-                        }
-                    </script>
-                </div>
+               <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
+    <script>
+        for(let i=2; i<=6; i++){
+            document.write(`
+            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
+                <img src="ppp${i}.jpg" class="w-full h-auto" alt="Physics Sample ${i}">
+            </div>`);
+        }
+    </script>
+</div>
 
-                <div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
-                    <script>
-                        for(let i=2; i<=6; i++){
-                            document.write(`
-                            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
-                                <img src="cccc${i}.jpg" class="w-full h-auto" alt="Chemistry Sample ${i}">
-                            </div>`);
-                        }
-                    </script>
-                </div>
+<div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
+    <script>
+        for(let i=2; i<=3; i++){
+            document.write(`
+            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
+                <img src="ccc${i}.jpg" class="w-full h-auto" alt="Chemistry Sample ${i}">
+            </div>`);
+        }
+    </script>
+</div>
 
-                <div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
-                    <script>
-                        for(let i=2; i<=6; i++){
-                            document.write(`
-                            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
-                                <img src="mmm${i}.jpg" class="w-full h-auto" alt="Maths Sample ${i}">
-                            </div>`);
-                        }
-                    </script>
-                </div>
+<div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
+    <script>
+        // Only one sample mentioned: mmm2
+        document.write(`
+        <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
+            <img src="mmm2.jpg" class="w-full h-auto" alt="Maths Sample 2">
+        </div>`);
+    </script>
+</div>
                 
                 <p class="text-center text-xs text-gray-400 mt-2">← Swipe to see more pages →</p>
             </div>
