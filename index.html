@@ -202,20 +202,24 @@ for (let i = 2; i <= 6; i++) {
 }
 </script>
 
-<div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
-    <script>
-        for(let i=2; i<=3; i++){
-            document.write(`
-            <div class="min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300">
-                <img src="ccc${i}.jpg" class="w-full h-auto" alt="Chemistry Sample ${i}">
-            </div>`);
-        }
-    </script>
-</div>
+<div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"> </div>
+
+<script>
+const chemContainer = document.getElementById("chem-slides");
+
+for (let i = 1; i <= 6; i++) {
+    const div = document.createElement("div");
+    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
+
+    div.innerHTML = `<img src="ccc${i}.jpg" class="w-full h-auto" alt="Chemistry Sample ${i}">`;
+
+    chemContainer.appendChild(div);
+}
+</script>
 
 <div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2">
     
-    <script>
+<script>
 const mathContainer = document.getElementById("math-slides");
 
 for (let i = 2; i <= 2; i++) {  // only one image mmm2
