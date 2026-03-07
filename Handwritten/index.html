@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIT JEE Notes — Revise Full Syllabus in 20 Days | ₹799</title>
+<meta name="description" content="2,700+ handwritten IIT JEE notes by AIR <100 toppers. Reviewed by IIT Bombay Alumni Faculty. Physics, Chemistry, Maths. Instant PDF download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FDFDFC;
+  --surface:#FFFFFF;
+  --surface-2:#F9FAFB;
+  --surface-3:#F3F4F6;
+
+  --accent:#F59E0B;       /* Amber CTA */
+  --accent-glow:#FBBF24;
+  --accent-dark:#D97706;
+
+  --brand:#4F46E5;        /* Indigo brand */
+
+  --green:#10B981;
+  --green-soft:#059669;
+
+  --yellow:#F59E0B;
+
+  --red:#EF4444;
+  --red-soft:rgba(239,68,68,0.08);
+
+  --blue:#4F46E5;
+  --blue-bg:rgba(79,70,229,0.08);
+  --blue-border:rgba(79,70,229,0.2);
+
+  --text:#0F172A;
+  --text-dim:#475569;
+  --text-muted:#64748B;
+
+  --border:#E5E7EB;
+
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:700px;margin:0 auto;padding:0 18px;}
+
+/* ═══ CTA BUTTON ═══ */
+.cta-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:18px 28px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;font-family:'Sora',sans-serif;
+  font-size:17px;font-weight:700;
+  border:none;border-radius:14px;cursor:pointer;
+  text-decoration:none;transition:all 0.2s ease;
+  box-shadow:0 4px 24px rgba(245,158,11,0.35);
+  position:relative;overflow:hidden;
+}
+.cta-btn::before{
+  content:'';position:absolute;top:0;left:-100%;
+  width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);
+  animation:shimmer 2.2s infinite;
+}
+@keyframes shimmer{100%{left:100%;}}
+.cta-btn:active{transform:scale(0.98);}
+.cta-sub{font-size:12px;color:var(--text-muted);margin-top:8px;text-align:center;}
+
+.section-label{
+  font-family:'Sora',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px;
+}
+.section-title{
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(26px,5.5vw,38px);
+  font-weight:800;line-height:1.15;
+  letter-spacing:-0.02em;margin-bottom:14px;
+}
+
+/* ═══ TRUST BAR ═══ */
+.trust-bar{
+  background:rgba(255,107,44,0.06);
+  border-bottom:1px solid rgba(255,107,44,0.12);
+  padding:9px 16px;text-align:center;
+  font-size:13px;font-weight:600;
+  color:var(--accent);
+  position:sticky;top:0;z-index:200;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;flex-wrap:wrap;
+  animation:fadeInDown 0.5s ease both;
+}
+.trust-bar .divider{width:1px;height:14px;background:rgba(255,255,255,0.1);}
+.trust-bar .dot{
+  display:inline-block;width:7px;height:7px;
+  background:var(--green);border-radius:50%;
+  margin-right:5px;animation:blink 1.5s ease infinite;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.trust-bar .iit{color:var(--blue);}
+.trust-bar .fomo-text{color:var(--text-dim);}
+
+/* ═══ SECTION 1: HERO ═══ */
+.hero{
+  padding:36px 0 32px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;
+  top:-200px;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;
+  background:radial-gradient(circle,rgba(255,107,44,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.iit-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 20px;
+  background:var(--blue-bg);
+  border:1.5px solid var(--blue-border);
+  border-radius:12px;margin-bottom:20px;
+  animation:fadeInDown 0.5s ease both;
+}
+.iit-badge .icon{
+  width:32px;height:32px;
+  background:rgba(59,130,246,0.15);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;
+}
+.iit-badge .text{text-align:left;line-height:1.2;}
+.iit-badge .text .top{
+  font-size:10px;font-weight:600;
+  color:var(--text-muted);text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+.iit-badge .text .main{
+  font-family:'Sora',sans-serif;font-size:14px;
+  font-weight:700;color:var(--blue);
+}
+
+.hero h1{
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(30px,7.5vw,48px);
+  font-weight:900;line-height:1.08;
+  letter-spacing:-0.03em;
+  margin-bottom:14px;
+  animation:fadeInUp 0.5s 0.05s ease both;
+}
+.hero h1 .highlight{
+  background:linear-gradient(135deg,#4F46E5,#6366F1);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:16px;color:var(--text-dim);
+  line-height:1.55;max-width:460px;
+  margin:0 auto 22px;
+  animation:fadeInUp 0.5s 0.1s ease both;
+}
+
+.price-block{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  margin-bottom:6px;
+  animation:fadeInUp 0.5s 0.15s ease both;
+}
+.price-row{display:flex;align-items:center;justify-content:center;gap:12px;}
+.price-row .old{font-size:22px;color:var(--text-muted);text-decoration:line-through;}
+.price-row .new{font-family:'Sora',sans-serif;font-size:42px;font-weight:800;color:var(--green);}
+.price-row .off-tag{
+  background:rgba(34,197,94,0.12);color:var(--green);
+  padding:4px 12px;border-radius:8px;font-size:13px;font-weight:700;
+}
+.price-value{font-size:12px;color:var(--text-muted);font-weight:500;}
+.price-value strong{color:var(--green);font-weight:700;}
+
+.urgency-strip{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 16px;margin:12px auto 20px;max-width:340px;
+  background:var(--red-soft);
+  border:1.5px solid rgba(239,68,68,0.2);
+  border-radius:10px;
+  animation:fadeInUp 0.5s 0.18s ease both;
+}
+.urgency-strip .label{font-size:13px;font-weight:700;color:var(--red);}
+.urgency-strip .timer{
+  font-family:'Sora',sans-serif;font-size:20px;font-weight:800;
+  color:var(--red);letter-spacing:0.04em;min-width:60px;
+}
+
+/* ═══ NOTE PREVIEW CAROUSEL ═══ */
+.preview-section{
+  margin-top:8px;margin-bottom:6px;
+  animation:fadeInUp 0.5s 0.22s ease both;
+}
+.preview-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:12px;
+}
+.preview-label{
+  font-size:13px;color:var(--text-dim);font-weight:600;
+}
+.preview-swipe-hint{
+  font-size:11px;color:var(--text-muted);
+  display:flex;align-items:center;gap:4px;
+}
+
+/* Subject Tabs */
+.subject-tabs{
+  display:flex;gap:6px;justify-content:center;
+  margin-bottom:14px;
+}
+.subject-tab{
+  padding:8px 18px;
+  border-radius:100px;
+  font-family:'Sora',sans-serif;
+  font-size:13px;font-weight:600;
+  cursor:pointer;
+  border:1.5px solid var(--border);
+  background:transparent;
+  color:var(--text-muted);
+  transition:all 0.25s ease;
+  user-select:none;
+}
+.subject-tab.active{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+  box-shadow:0 2px 12px rgba(255,107,44,0.3);
+}
+.subject-tab:not(.active):hover{
+  border-color:var(--text-muted);
+  color:var(--text-dim);
+}
+/* Color hints for each tab when active */
+.subject-tab[data-subject="physics"].active{background:#3B82F6;border-color:#3B82F6;box-shadow:0 2px 12px rgba(59,130,246,0.3);}
+.subject-tab[data-subject="chemistry"].active{background:#8B5CF6;border-color:#8B5CF6;box-shadow:0 2px 12px rgba(139,92,246,0.3);}
+.subject-tab[data-subject="maths"].active{background:#16A34A;border-color:#16A34A;box-shadow:0 2px 12px rgba(22,163,74,0.3);}
+
+/* Carousel Container */
+.carousel-wrapper{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+}
+.carousel-panels{
+  position:relative;
+}
+.carousel-panel{
+  display:none;
+}
+.carousel-panel.active{
+  display:block;
+}
+
+/* Horizontal scroll track */
+.carousel-track{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  padding:4px 2px;
+}
+.carousel-track::-webkit-scrollbar{display:none;}
+
+/* Individual note image card */
+.note-slide{
+  flex:0 0 calc(75% - 5px);
+  scroll-snap-align:start;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--surface);
+  position:relative;
+  aspect-ratio:3/4;
+}
+.note-slide img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+}
+/* Placeholder until real images are added */
+.note-slide .img-placeholder{
+  width:100%;height:100%;
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface-2) 50%,var(--surface-3) 100%);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;padding:20px;
+}
+.note-slide .img-placeholder .ph-icon{font-size:36px;opacity:0.6;}
+.note-slide .img-placeholder .ph-text{
+  font-size:12px;color:var(--text-muted);
+  text-align:center;line-height:1.4;
+}
+.note-slide .img-placeholder .ph-filename{
+  font-size:10px;color:var(--text-muted);
+  opacity:0.5;font-family:monospace;
+  background:rgba(255,255,255,0.05);
+  padding:3px 8px;border-radius:4px;
+  margin-top:4px;
+}
+
+/* Caption overlay on each slide */
+.note-slide .caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:10px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.85));
+  display:flex;align-items:center;justify-content:space-between;
+}
+.note-slide .caption .tag{
+  font-size:11px;font-weight:600;color:#fff;
+}
+.note-slide .caption .page-num{
+  font-size:10px;color:rgba(255,255,255,0.5);
+}
+
+/* Dot indicators */
+.carousel-dots{
+  display:flex;justify-content:center;gap:6px;
+  margin-top:10px;
+}
+.carousel-dot{
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--border);
+  transition:all 0.25s ease;
+  cursor:pointer;
+}
+.carousel-dot.active{
+  background:var(--accent);
+  width:20px;
+  border-radius:4px;
+}
+/* Match dot color to subject */
+.carousel-panel[data-subject="physics"] .carousel-dot.active{background:#3B82F6;}
+.carousel-panel[data-subject="chemistry"] .carousel-dot.active{background:#8B5CF6;}
+.carousel-panel[data-subject="maths"] .carousel-dot.active{background:#16A34A;}
+
+.hero-cta-wrap{margin-top:22px;animation:fadeInUp 0.5s 0.3s ease both;}
+
+.stats-row{
+  display:flex;justify-content:center;gap:22px;
+  margin-top:24px;padding-top:18px;
+  border-top:1px solid var(--border);
+  animation:fadeInUp 0.5s 0.35s ease both;
+}
+.stat{text-align:center;}
+.stat .val{font-family:'Sora',sans-serif;font-size:20px;font-weight:700;}
+.stat .lbl{font-size:11px;color:var(--text-muted);margin-top:1px;}
+
+/* ═══ SECTION DIVIDER ═══ */
+.section-line{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
+
+/* ═══ SECTION 2: WHAT'S INSIDE ═══ */
+.inside{padding:40px 0;}
+.subject-cards{display:flex;flex-direction:column;gap:14px;margin-top:22px;}
+.subject-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px;
+  display:grid;grid-template-columns:48px 1fr;gap:16px;
+  transition:border-color 0.3s ease;
+}
+.subject-card:hover{border-color:rgba(255,107,44,0.3);}
+.subject-icon{
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.subject-icon.phy{background:rgba(59,130,246,0.12);color:#60A5FA;}
+.subject-icon.chem{background:rgba(168,85,247,0.12);color:#C084FC;}
+.subject-icon.math{background:rgba(34,197,94,0.12);color:#4ADE80;}
+.subject-info h3{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;margin-bottom:3px;}
+.subject-pages{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px;}
+.subject-bullets{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.subject-bullets li{
+  font-size:13px;color:var(--text-dim);
+  padding-left:18px;position:relative;line-height:1.4;
+}
+.subject-bullets li::before{
+  content:'✓';position:absolute;left:0;
+  color:var(--green);font-weight:700;font-size:12px;
+}
+.total-banner{
+  margin-top:18px;
+  background:linear-gradient(135deg,rgba(255,107,44,0.08),rgba(255,107,44,0.03));
+  border:1px solid rgba(255,107,44,0.15);
+  border-radius:12px;padding:14px 20px;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+}
+.total-banner .num{font-family:'Outfit',sans-serif;font-size:34px;font-weight:800;color:var(--accent);}
+.total-banner .lbl{font-size:13px;color:var(--text-dim);text-align:left;line-height:1.3;}
+.total-banner .lbl strong{color:var(--text);}
+
+/* ═══ SECTION 3: PROOF ═══ */
+.proof{padding:40px 0;}
+.score-jump{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px 20px;
+  text-align:center;margin-bottom:14px;
+  position:relative;overflow:hidden;
+}
+.score-jump .top-line{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--green));
+}
+.score-jump .arrow-row{
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  margin-bottom:12px;
+}
+.score-block{text-align:center;}
+.score-block .score-label{
+  font-size:11px;color:var(--text-muted);
+  text-transform:uppercase;letter-spacing:0.1em;
+  margin-bottom:2px;font-weight:600;
+}
+.score-block .score-num{font-family:'Outfit',sans-serif;font-weight:800;}
+.score-block .score-num.before{font-size:36px;color:var(--text-muted);}
+.score-block .score-num.after{font-size:46px;color:var(--green);}
+.score-arrow{font-size:26px;color:var(--accent);animation:pulse 1.5s ease infinite;}
+@keyframes pulse{0%,100%{opacity:0.4;}50%{opacity:1;}}
+.score-quote{font-size:13px;color:var(--text-muted);font-style:italic;max-width:330px;margin:0 auto;}
+
+.revision-time{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px;
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  margin-bottom:14px;
+}
+.time-block{text-align:center;flex:1;}
+.time-block .time-val{font-family:'Outfit',sans-serif;font-size:30px;font-weight:800;}
+.time-block .time-val.slow{color:var(--text-muted);}
+.time-block .time-val.fast{color:var(--green);}
+.time-block .time-lbl{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.vs-divider{
+  font-family:'Sora',sans-serif;font-size:11px;font-weight:700;
+  color:var(--text-muted);background:var(--surface-2);
+  border-radius:50%;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;border:1px solid var(--border);
+}
+
+.wa-grid{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  margin-bottom:8px;
+}
+
+.wa-grid::-webkit-scrollbar{
+  display:none;
+}
+.wa-screenshot{
+  flex:0 0 70%;
+  scroll-snap-align:start;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  aspect-ratio:9/16;
+  overflow:hidden;
+}
+
+  .wa-screenshot img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+  .wa-screenshot img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.wa-placeholder{
+  display:flex;flex-direction:column;align-items:center;
+  gap:4px;color:var(--text-muted);font-size:11px;text-align:center;
+}
+.wa-placeholder .wa-icon{font-size:24px;}
+.wa-caption{text-align:center;font-size:11px;color:var(--text-muted);margin-bottom:16px;}
+
+.testimonial{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:22px;display:flex;gap:14px;
+}
+.testimonial-avatar{
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,#3B82F6,#8B5CF6);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:16px;flex-shrink:0;
+}
+.testimonial-stars{color:var(--yellow);font-size:13px;margin-bottom:6px;letter-spacing:1px;}
+.testimonial-text{font-size:14px;color:var(--text-dim);line-height:1.55;margin-bottom:8px;}
+.testimonial-name{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;}
+.testimonial-tag{font-size:11px;color:var(--accent);font-weight:600;}
+
+/* ═══ SECTION 4: PRICING ═══ */
+.pricing{padding:40px 0;text-align:center;}
+.pricing-card{
+  background:var(--surface);border:2px solid var(--accent);
+  border-radius:20px;padding:30px 24px;
+  max-width:450px;margin:0 auto;position:relative;
+  box-shadow:0 0 70px rgba(255,107,44,0.08);
+}
+.pricing-card-badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;padding:5px 18px;border-radius:100px;
+  font-family:'Sora',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;
+}
+.pricing-title{
+  font-family:'Outfit',sans-serif;font-size:21px;font-weight:800;
+  margin-top:8px;margin-bottom:18px;
+}
+.pricing-items{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
+.pricing-item{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:14px;color:var(--text-dim);line-height:1.4;
+}
+.pricing-item .check{color:var(--green);font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px;}
+.pricing-item strong{color:var(--text);}
+.pricing-item .free-badge{
+  background:rgba(34,197,94,0.12);color:var(--green);
+  padding:1px 7px;border-radius:4px;
+  font-size:10px;font-weight:700;margin-left:3px;
+}
+.pricing-item .iit-tag{
+  background:var(--blue-bg);color:var(--blue);
+  padding:1px 7px;border-radius:4px;
+  font-size:10px;font-weight:700;margin-left:3px;
+}
+
+.pricing-divider{border:none;border-top:1px solid var(--border);margin-bottom:20px;}
+.pricing-price{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:4px;}
+.pricing-price .old{font-size:22px;color:var(--text-muted);text-decoration:line-through;}
+.pricing-price .new{font-family:'Outfit',sans-serif;font-size:50px;font-weight:900;color:var(--green);}
+.pricing-save{font-size:12px;color:var(--green);font-weight:600;margin-bottom:4px;}
+.pricing-per-page{font-size:12px;color:var(--text-muted);margin-bottom:14px;}
+.pricing-per-page strong{color:var(--green);font-weight:700;}
+
+.pricing-urgency{
+  background:var(--red-soft);
+  border:1.5px solid rgba(239,68,68,0.2);
+  border-radius:10px;padding:10px 14px;margin-bottom:16px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.pricing-urgency .fire{font-size:15px;}
+.pricing-urgency .text{font-size:12px;font-weight:700;color:var(--red);}
+.pricing-urgency .timer{
+  font-family:'Sora',sans-serif;font-size:16px;font-weight:800;
+  color:var(--red);letter-spacing:0.04em;
+}
+
+.pricing-fomo{
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  font-size:12px;color:var(--text-muted);margin-top:14px;
+}
+.pricing-fomo .dot{
+  display:inline-block;width:6px;height:6px;
+  background:var(--green);border-radius:50%;animation:blink 1.5s ease infinite;
+}
+.pricing-fomo strong{color:var(--text-dim);}
+
+.parent-trust{
+  margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:7px;align-items:center;
+}
+.parent-trust .line{
+  font-size:12px;color:var(--text-muted);
+  display:flex;align-items:center;gap:6px;
+}
+.parent-trust .line .icon{font-size:14px;}
+
+/* ═══ SECTION 5: FAQ ═══ */
+.faq{padding:40px 0 24px;}
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:20px;margin-bottom:32px;}
+.faq-item{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;transition:border-color 0.3s ease;
+}
+.faq-item:hover{border-color:rgba(255,107,44,0.2);}
+.faq-q{
+  padding:15px 18px;display:flex;
+  align-items:center;justify-content:space-between;
+  cursor:pointer;font-size:14px;font-weight:600;
+  user-select:none;gap:10px;
+}
+.faq-q .arrow{font-size:16px;color:var(--text-muted);transition:transform 0.25s ease;flex-shrink:0;}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;}
+.faq-item.open .faq-a{max-height:220px;}
+.faq-a-inner{padding:0 18px 15px;font-size:13px;color:var(--text-dim);line-height:1.65;}
+
+/* Final CTA */
+.final-cta{text-align:center;padding:28px 0 44px;position:relative;}
+.final-cta::before{
+  content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:600px;height:400px;
+  background:radial-gradient(circle,rgba(255,107,44,0.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+.final-headline{
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(22px,5vw,32px);font-weight:800;
+  line-height:1.2;margin-bottom:8px;
+}
+.final-sub{
+  font-size:14px;color:var(--text-dim);margin-bottom:16px;
+  max-width:400px;margin-left:auto;margin-right:auto;line-height:1.55;
+}
+.final-timer-row{
+  display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;
+}
+.final-timer-row .label{font-size:12px;color:var(--red);font-weight:600;}
+.final-timer-row .timer{
+  font-family:'Sora',sans-serif;font-size:17px;font-weight:800;
+  color:var(--red);background:var(--red-soft);
+  padding:3px 12px;border-radius:6px;border:1px solid rgba(239,68,68,0.2);
+}
+
+footer{padding:24px 0;border-top:1px solid var(--border);text-align:center;}
+footer .brand{font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:var(--text-dim);margin-bottom:6px;}
+footer .links{display:flex;gap:16px;justify-content:center;margin-bottom:8px;}
+footer .links a{color:var(--text-muted);text-decoration:none;font-size:12px;transition:color 0.2s;}
+footer .links a:hover{color:var(--text);}
+footer .copy{font-size:11px;color:var(--text-muted);}
+
+.wa-float{
+  position:fixed;bottom:90px;right:20px;
+  width:54px;height:54px;background:#25D366;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(37,211,102,0.4);
+  z-index:100;text-decoration:none;transition:transform 0.2s;
+  animation:fadeInUp 0.5s 0.8s ease both;
+}
+.wa-float:hover{transform:scale(1.08);}
+.wa-float svg{width:26px;height:26px;fill:#fff;}
+
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:all 0.5s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+
+  /* Sticky mobile CTA */
+.mobile-sticky-cta{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  border-top:1px solid var(--border);
+  padding:10px 14px;
+  display:none;
+  z-index:300;
+  box-shadow:0 -4px 12px rgba(0,0,0,0.08);
+}
+
+.mobile-sticky-cta .cta-btn{
+  padding:14px;
+  font-size:16px;
+  border-radius:10px;
+}
+
+@media(max-width:768px){
+  .mobile-sticky-cta{
+    display:block;
+  }
+} 
+@media(max-width:480px){
+  .container{padding:0 14px;}
+  .hero{padding:28px 0 24px;}
+  .trust-bar{font-size:11px;gap:8px;padding:8px 12px;}
+  .trust-bar .divider{display:none;}
+  .iit-badge{padding:8px 14px;gap:8px;}
+  .iit-badge .icon{width:28px;height:28px;font-size:14px;border-radius:6px;}
+  .iit-badge .text .main{font-size:13px;}
+  .note-slide{flex:0 0 calc(80% - 5px);}
+  .stats-row{gap:14px;}
+  .stat .val{font-size:17px;}
+  .subject-card{grid-template-columns:1fr;gap:10px;}
+  .subject-icon{width:40px;height:40px;font-size:18px;border-radius:10px;}
+  .wa-grid{gap:5px;}
+  .testimonial{flex-direction:column;gap:10px;}
+  .revision-time{gap:10px;}
+  .pricing-card{padding:24px 18px;}
+  .pricing-price .new{font-size:42px;}
+  .price-row .new{font-size:36px;}
+  .subject-tab{padding:7px 14px;font-size:12px;}
+}
+
+  /* ═══ RESULTS & SUCCESS STORIES ═══ */
+
+.success-section{
+  padding:40px 0;
+  background:var(--surface);
+}
+
+.success-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.success-header h2{
+  font-family:'Outfit',sans-serif;
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.success-header p{
+  font-size:14px;
+  color:var(--text-muted);
+}
+
+.success-scroll{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+
+.success-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+.success-card{
+  flex:0 0 75%;
+  scroll-snap-align:start;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.success-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.success-body{
+  padding:14px;
+}
+
+.success-stars{
+  color:#F59E0B;
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.success-name{
+  font-family:'Sora',sans-serif;
+  font-weight:700;
+  font-size:16px;
+}
+
+.success-rank{
+  font-size:12px;
+  color:var(--text-muted);
+  margin-bottom:6px;
+}
+
+.success-text{
+  font-size:13px;
+  color:var(--text-dim);
+  line-height:1.5;
+}
+</style>
+</head>
+<body>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="iit">🎓 Reviewed by IIT Bombay Alumni Faculty</span>
+  <span class="divider"></span>
+  <span class="fomo-text"><span class="dot"></span><span id="fomo-count">72</span> parents purchased in the last 8 hours</span>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1: HERO
+     ═══════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="container">
+
+    
+
+    <h1>Revise Full JEE Syllabus<br>in <span class="highlight">20 Days</span></h1>
+
+    <p class="hero-sub">Topper-style handwritten PCM notes (PDF). 2,700+ pages. 100% NTA-aligned and Errorless.</p>
+
+
+    <div class="urgency-strip">
+      <span class="label">⏰ Offer expires in</span>
+      <span class="timer" id="offer-timer-hero">15:00</span>
+    </div>
+
+    <div class="price-block">
+      <div class="price-row">
+        <span class="old">₹2,499</span>
+        <span class="new">₹799</span>
+        <span class="off-tag">68% OFF</span>
+      </div>
+      <div class="price-value">That's just <strong>₹0.29 per page</strong> — less than a photocopy</div>
+    </div>
+
+    
+
+    <!-- ═══ NOTE PREVIEW CAROUSEL ═══ -->
+   <div class="preview-section">
+  <div class="preview-header">
+    <span class="preview-label">👇 See actual pages from the notes</span>
+    <span class="preview-swipe-hint">← Swipe →</span>
+  </div>
+
+  <!-- Subject Tabs -->
+  <div class="subject-tabs">
+    <button class="subject-tab active" data-subject="physics" onclick="switchSubject('physics')">⚛️ Physics</button>
+    <button class="subject-tab" data-subject="chemistry" onclick="switchSubject('chemistry')">🧪 Chemistry</button>
+    <button class="subject-tab" data-subject="maths" onclick="switchSubject('maths')">📐 Maths</button>
+  </div>
+
+  <div class="carousel-panels">
+
+    <!-- PHYSICS -->
+    <div class="carousel-panel active" data-subject="physics" id="panel-physics">
+      <div class="carousel-track" onscroll="updateDots('physics')">
+
+        <div class="note-slide">
+          <img src="ppp1.jpg" alt="Physics diagram">
+          <div class="caption">
+            <span class="tag">Clean Diagrams</span>
+            <span class="page-num">Page 1 of 750</span>
+          </div>
+        </div>
+
+        <div class="note-slide">
+          <img src="ppp2.jpg" alt="Physics derivation">
+          <div class="caption">
+            <span class="tag">Full Derivations</span>
+            <span class="page-num">Page 2 of 750</span>
+          </div>
+        </div>
+
+        <div class="note-slide">
+          <img src="ppp3.jpg" alt="Physics formula sheet">
+          <div class="caption">
+            <span class="tag">Formula Sheet</span>
+            <span class="page-num">Page 3 of 750</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousel-dots" id="dots-physics">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
+    </div>
+
+    <!-- CHEMISTRY -->
+    <div class="carousel-panel" data-subject="chemistry" id="panel-chemistry">
+      <div class="carousel-track" onscroll="updateDots('chemistry')">
+
+        <div class="note-slide">
+          <img src="ccc1.jpg" alt="Organic reaction mechanism">
+          <div class="caption">
+            <span class="tag">Reaction Mechanisms</span>
+            <span class="page-num">Page 1 of 1,247</span>
+          </div>
+        </div>
+
+        <div class="note-slide">
+          <img src="ccc2.jpg" alt="Inorganic chemistry chart">
+          <div class="caption">
+            <span class="tag">Inorganic Charts</span>
+            <span class="page-num">Page 2 of 1,247</span>
+          </div>
+        </div>
+
+        <div class="note-slide">
+          <img src="ccc3.jpg" alt="Physical chemistry numerical">
+          <div class="caption">
+            <span class="tag">Solved Numericals</span>
+            <span class="page-num">Page 3 of 1,247</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousel-dots" id="dots-chemistry">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
+    </div>
+
+    <!-- MATHS -->
+    <div class="carousel-panel" data-subject="maths" id="panel-maths">
+      <div class="carousel-track" onscroll="updateDots('maths')">
+
+        <div class="note-slide">
+          <img src="mmm1.jpg" alt="Coordinate geometry">
+          <div class="caption">
+            <span class="tag">Visual Methods</span>
+            <span class="page-num">Page 1 of 726</span>
+          </div>
+        </div>
+
+        <div class="note-slide">
+          <img src="mmm2.jpg" alt="Integration calculus">
+          <div class="caption">
+            <span class="tag">Calculus Shortcuts</span>
+            <span class="page-num">Page 2 of 726</span>
+          </div>
+        </div>
+
+        <div class="note-slide">
+          <img src="mmm3.jpg" alt="Maths tricks">
+          <div class="caption">
+            <span class="tag">PYQ Shortcuts</span>
+            <span class="page-num">Page 3 of 726</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousel-dots" id="dots-maths">
+        <span class="carousel-dot active"></span>
+        <span class="carousel-dot"></span>
+        <span class="carousel-dot"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <!-- CTA after seeing previews -->
+    <div class="hero-cta-wrap">
+      <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">Get Instant Access — ₹799 ⚡</a>
+      <p class="cta-sub">📥 PDF link sent to email in 10 seconds · Lifetime access · 100% Printable</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><div class="val">4,312+</div><div class="lbl">Students</div></div>
+      <div class="stat"><div class="val">2,700+</div><div class="lbl">Pages</div></div>
+      <div class="stat"><div class="val">AIR &lt;100</div><div class="lbl">Toppers</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2: WHAT'S INSIDE
+     ═══════════════════════════════════════════ -->
+<section class="inside" id="inside">
+  <div class="container">
+    <div class="section-label reveal">What's Inside</div>
+    <h2 class="section-title reveal">Every chapter. Every concept.</h2>
+
+    <div class="subject-cards">
+      <div class="subject-card reveal">
+        <div class="subject-icon phy">⚛️</div>
+        <div class="subject-info">
+          <h3>Physics</h3>
+          <div class="subject-pages">750 handwritten pages</div>
+          <ul class="subject-bullets">
+            <li>Mechanics to Modern Physics — full coverage</li>
+            <li>Every derivation with step-by-step diagrams</li>
+            <li>Bonus: 40-page formula cheat sheet</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subject-card reveal">
+        <div class="subject-icon chem">🧪</div>
+        <div class="subject-info">
+          <h3>Chemistry</h3>
+          <div class="subject-pages">1,247 handwritten pages</div>
+          <ul class="subject-bullets">
+            <li>Physical, Organic & Inorganic — all three</li>
+            <li>Reaction mechanisms + all exceptions</li>
+            <li>GOC & Isomerism explained in detail</li>
+          </ul>
+        </div>
+      </div>
+      <div class="subject-card reveal">
+        <div class="subject-icon math">📐</div>
+        <div class="subject-info">
+          <h3>Mathematics</h3>
+          <div class="subject-pages">726 handwritten pages</div>
+          <ul class="subject-bullets">
+            <li>Algebra, Calculus, Coordinate Geometry, Vectors</li>
+            <li>Problem-solving shortcuts & tricks</li>
+            <li>Important PYQs marked and solved</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-banner reveal">
+      <div class="num">2,723</div>
+      <div class="lbl">Total pages covering<br><strong>11th & 12th complete syllabus</strong></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3: PROOF
+     ═══════════════════════════════════════════ -->
+<section class="proof" id="proof">
+  <div class="container">
+    <div class="section-label reveal">Real Results</div>
+    <h2 class="section-title reveal">Students don't just read.<br>They <span style="color:var(--green)">score higher</span>.</h2>
+
+    <div class="score-jump reveal">
+      <div class="top-line"></div>
+      <div class="arrow-row">
+        <div class="score-block">
+          <div class="score-label">Before</div>
+          <div class="score-num before">80</div>
+        </div>
+        <div class="score-arrow">→</div>
+        <div class="score-block">
+          <div class="score-label">After 3 Weeks</div>
+          <div class="score-num after">160+</div>
+        </div>
+      </div>
+      <p class="score-quote">"Went from 80 to 160+ in mocks in just 3 weeks using these notes."</p>
+    </div>
+
+    <div class="revision-time reveal">
+      <div class="time-block">
+        <div class="time-val slow">5 hrs</div>
+        <div class="time-lbl">Textbook revision</div>
+      </div>
+      <div class="vs-divider">vs</div>
+      <div class="time-block">
+        <div class="time-val fast">1 hr</div>
+        <div class="time-lbl">With these notes</div>
+      </div>
+    </div>
+
+    <div class="wa-grid reveal">
+  <div class="wa-screenshot">
+    <img src="s1.jpg" alt="WhatsApp Review 1">
+  </div>
+
+  <div class="wa-screenshot">
+    <img src="s2.jpg" alt="WhatsApp Review 2">
+  </div>
+
+  <div class="wa-screenshot">
+    <img src="s3.jpg" alt="WhatsApp Review 3">
+  </div>
+</div>
+
+<p class="wa-caption reveal">✅ Verified WhatsApp conversations — unedited</p>
+
+   
+</section>
+
+<div class="section-line"></div>
+
+  <section class="success-section">
+  <div class="container">
+
+    <div class="success-header">
+      <h2>Results & Success Stories</h2>
+      <p>Real students. Real Ranks.</p>
+    </div>
+
+    <div class="success-scroll">
+
+      <div class="success-card">
+        <img src="stu1.jpg" alt="Sri Charan IIT Bombay">
+        <div class="success-body">
+          <div class="success-stars">★★★★★</div>
+          <div class="success-name">Sri Charan</div>
+          <div class="success-rank">IIT Bombay (Computer Science)</div>
+          <div class="success-text">
+            Used the one-shot revision pages & formula book — last month revision saved 3 weeks.
+          </div>
+        </div>
+      </div>
+
+      <div class="success-card">
+        <img src="stu2.jpg" alt="Ananya R">
+        <div class="success-body">
+          <div class="success-stars">★★★★★</div>
+          <div class="success-name">Ananya R</div>
+          <div class="success-rank">JEE Aspirant</div>
+          <div class="success-text">
+            Clear diagrams and concise formulas made revision quick & effective.
+          </div>
+        </div>
+      </div>
+
+      <div class="success-card">
+        <img src="st3.jpg" alt="Rahul K">
+        <div class="success-body">
+          <div class="success-stars">★★★★★</div>
+          <div class="success-name">Rahul K</div>
+          <div class="success-rank">JEE Aspirant</div>
+          <div class="success-text">
+            Formula book and mind maps helped me solve numericals faster.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4: PRICING
+     ═══════════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label reveal">Limited Time Offer</div>
+    <h2 class="section-title reveal">One bundle. One price.</h2>
+
+    <div class="pricing-card reveal">
+      <div class="pricing-card-badge">Complete PCM Bundle</div>
+      <h3 class="pricing-title">Handwritten JEE Notes</h3>
+
+      <div class="pricing-items">
+        <div class="pricing-item"><span class="check">✓</span><span><strong>2,700+ handwritten pages</strong> — PCM</span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Class 11th & 12th complete syllabus</span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>High-resolution PDF — 100% printable</span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Reviewed by IIT Bombay Alumni Faculty <span class="iit-tag">VERIFIED</span></span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>"Night Before" Formula Sheet <span class="free-badge">FREE</span></span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Top 100 Repeated JEE PYQs <span class="free-badge">FREE</span></span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Predicted Question Paper 2026 <span class="free-badge">FREE</span></span></div>
+      </div>
+
+      <hr class="pricing-divider">
+
+      <div class="pricing-price">
+        <span class="old">₹2,499</span>
+        <span class="new">₹799</span>
+      </div>
+      <p class="pricing-save">You save ₹1,700 — Lifetime access</p>
+      <p class="pricing-per-page">Just <strong>₹0.29 per page</strong> — cheaper than photocopying from a friend</p>
+
+      <div class="pricing-urgency">
+        <span class="fire">🔥</span>
+        <span class="text">This price expires in</span>
+        <span class="timer" id="offer-timer-pricing">15:00</span>
+      </div>
+
+      <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">Get Instant Access — ₹799 ⚡</a>
+      <p class="cta-sub">📥 PDF link sent to email in 10 seconds</p>
+
+      <div class="pricing-fomo">
+        <span class="dot"></span>
+        <span><strong id="fomo-count-2">73</strong> parents purchased in the last 8 hours</span>
+      </div>
+
+      <div class="parent-trust">
+        <div class="line"><span class="icon">🔒</span> Secure payment via Cashfree (UPI, Card, NetBanking)</div>
+        <div class="line"><span class="icon">🖨️</span> 100% printable — your child gets physical notes on their desk</div>
+        <div class="line"><span class="icon">💬</span> Any issues? WhatsApp us — instant response guaranteed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5: FAQ + FINAL CTA
+     ═══════════════════════════════════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-label reveal">Questions?</div>
+    <h2 class="section-title reveal">Parents Ask Us</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is this for JEE Main or Advanced?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Both. The notes cover NCERT basics up to Advanced-level problem-solving. Whether your child is targeting Main or Advanced, they're fully covered.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How does my child receive the notes?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Immediately after payment, a PDF download link is sent to the email you provide — within 10 seconds. Your child can start studying instantly, and you can print the notes for their desk.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Who wrote and reviewed these notes?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Written by AIR &lt;100 JEE toppers and reviewed by IIT Bombay Alumni Faculty. Every page is error-checked, NTA-aligned, and follows the latest exam pattern.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is the payment secure?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Payments are processed through Cashfree, a RBI-regulated payment gateway. You can pay via UPI, debit/credit card, or net banking — all fully secure.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What if we don't receive the email?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Check spam/promotions folder first. If it's not there, WhatsApp us and we'll resend instantly — guaranteed. No parent has ever not received their notes.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-headline reveal">Give your child the revision<br>advantage 4,312+ students have.</h2>
+    <p class="final-sub reveal">₹799 for 2,700+ pages of topper-quality notes. Reviewed by IIT Bombay faculty. Instant delivery.</p>
+    <div class="final-timer-row reveal">
+      <span class="label">⏰ This price expires in</span>
+      <span class="timer" id="offer-timer-final">15:00</span>
+    </div>
+    <div class="reveal">
+      <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">Get Instant Access — ₹799 ⚡</a>
+      <p class="cta-sub">Lifetime access · Printable · Instant delivery</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand">iitjeenote.com</div>
+    <div class="links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refund.html">Refund</a>
+    </div>
+    <p class="copy">Managed by iihub llp · support@iitjeenote.com · © 2025 iiTuitions</p>
+  </div>
+</footer>
+
+  <!-- MOBILE STICKY CTA -->
+<div class="mobile-sticky-cta">
+  <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">
+    Get Instant Access — ₹799 ⚡
+  </a>
+</div>
+
+<a class="wa-float" href="https://wa.me/918639221271" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// ═══ SUBJECT TAB SWITCHING ═══
+function switchSubject(subject){
+  // Update tabs
+  document.querySelectorAll('.subject-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector(`.subject-tab[data-subject="${subject}"]`).classList.add('active');
+
+  // Update panels
+  document.querySelectorAll('.carousel-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById(`panel-${subject}`).classList.add('active');
+
+  // Reset scroll position
+  const track=document.querySelector(`#panel-${subject} .carousel-track`);
+  if(track)track.scrollLeft=0;
+
+  // Reset dots
+  resetDots(subject);
+}
+
+// ═══ DOT INDICATORS ═══
+function updateDots(subject){
+  const panel=document.getElementById(`panel-${subject}`);
+  const track=panel.querySelector('.carousel-track');
+  const slides=track.querySelectorAll('.note-slide');
+  const dots=panel.querySelectorAll('.carousel-dot');
+
+  if(!slides.length||!dots.length)return;
+
+  const slideWidth=slides[0].offsetWidth+10; // width + gap
+  const scrollPos=track.scrollLeft;
+  const activeIndex=Math.round(scrollPos/slideWidth);
+  const clampedIndex=Math.min(activeIndex,dots.length-1);
+
+  dots.forEach((d,i)=>{
+    d.classList.toggle('active',i===clampedIndex);
+  });
+}
+
+function resetDots(subject){
+  const dots=document.querySelectorAll(`#panel-${subject} .carousel-dot`);
+  dots.forEach((d,i)=>d.classList.toggle('active',i===0));
+}
+
+// ═══ SESSION TIMER (15 min) ═══
+(function(){
+  const KEY='iitjee_offer_end';
+  let end;
+  try{
+    const s=sessionStorage.getItem(KEY);
+    if(s&&parseInt(s)>Date.now()){end=parseInt(s);}
+    else{end=Date.now()+900000;sessionStorage.setItem(KEY,end.toString());}
+  }catch(e){end=Date.now()+900000;}
+
+  function fmt(ms){
+    if(ms<=0)return'00:00';
+    const m=Math.floor(ms/60000),s=Math.floor((ms%60000)/1000);
+    return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  }
+  function tick(){
+    const r=end-Date.now();
+    const d=fmt(r);
+    ['offer-timer-hero','offer-timer-pricing','offer-timer-final'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el)return;
+      if(r<=0){el.textContent='EXPIRED';el.style.animation='blink 1s infinite';return;}
+      el.textContent=d;
+      if(r<300000)el.style.color='#FF3333';
+    });
+    if(r>0)requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+// ═══ FOMO ═══
+document.getElementById('fomo-count').textContent = 72;
+document.getElementById('fomo-count-2').textContent = 72;
+
+// ═══ FAQ ═══
+function toggleFaq(el){
+  const item=el.parentElement;
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+
+// ═══ SCROLL REVEAL ═══
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+})();
+</script>
+</body>
+</html>
