@@ -866,5 +866,10 @@ setInterval(showPurchaseToast,15000+Math.random()*10000);
 
 })();
     </script>
+    document.querySelectorAll('a[href*="cashfree"]').forEach(btn => {
+  btn.addEventListener('click', function() {
+    fbq('track', 'InitiateCheckout');
+  });
+});
 </body>
 </html>
