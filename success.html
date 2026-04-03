@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
+
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -11,105 +12,928 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init', '1613503116361370');
 fbq('track', 'PageView');
-
-// 🔥 MOST IMPORTANT LINE
-fbq('track', 'Purchase', {
-  value: 499,
-  currency: 'INR'
-});
+fbq('track', 'Purchase', { value: 499, currency: 'INR' });
 </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1613503116361370&ev=PageView&noscript=1"/></noscript>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payment Successful | iiTuitions</title>
-
-<script>
-console.log("Success page loaded");
-
-const email = "iituitions2018@gmail.com";
-
-fetch("https://iitjeenote-webhook-production.up.railway.app/send-email", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    email: email
-  })
-})
-.then(res => res.text())
-.then(data => {
-  console.log("Server response:", data);
-})
-.catch(err => {
-  console.error("Error calling API:", err);
-});
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>You Made the Right Choice — IIT JEE Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-body{
-font-family: Inter, sans-serif;
-background:#f9fafb;
-text-align:center;
-padding:60px 20px;
-color:#111827;
+:root {
+  --ink:     #0A0E1A;
+  --ink2:    #141929;
+  --gold:    #C9901A;
+  --gold2:   #E8B84B;
+  --gold3:   #FDE68A;
+  --cream:   #FDFAF4;
+  --cream2:  #F7F2E8;
+  --offwhite:#FFFFFF;
+  --indigo:  #3730A3;
+  --indigol: #4F46E5;
+  --indigobg:#EEF2FF;
+  --green:   #047857;
+  --greenbg: #D1FAE5;
+  --greentx: #064E3B;
+  --amber:   #B45309;
+  --amberbg: #FEF3C7;
+  --ambertx: #78350F;
+  --muted:   #6B7280;
+  --border:  #E8E2D5;
+  --shadow:  rgba(10,14,26,0.08);
 }
 
-.card{
-background:white;
-max-width:500px;
-margin:auto;
-padding:40px 30px;
-border-radius:20px;
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1{
-font-size:32px;
-margin-bottom:10px;
-font-weight:800;
-color:#4F46E5;
+/* ═══════════════════════════════
+   CELEBRATION HERO
+═══════════════════════════════ */
+.hero {
+  min-height: 100svh;
+  background: var(--ink);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 60px 24px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-p{
-font-size:16px;
-color:#374151;
-margin-bottom:10px;
-line-height:1.5;
+/* Radial glow */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%,   rgba(201,144,26,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 40% at 80% 80%,  rgba(79,70,229,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 10% 70%,  rgba(201,144,26,0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
-.brand{
-margin-top:20px;
-font-size:14px;
-color:#6B7280;
+/* Subtle grid overlay */
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
 }
 
+.hero-inner { position: relative; z-index: 2; max-width: 420px; }
+
+/* Floating orbs */
+.orb {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; z-index: 1;
+  animation: drift var(--t,8s) var(--d,0s) ease-in-out infinite alternate;
+}
+.orb-1 { width:200px;height:200px; top:-60px; left:-80px; background:radial-gradient(circle,rgba(201,144,26,0.12),transparent 70%); --t:9s; --d:0s; }
+.orb-2 { width:160px;height:160px; bottom:-40px; right:-60px; background:radial-gradient(circle,rgba(79,70,229,0.14),transparent 70%); --t:7s; --d:1.5s; }
+.orb-3 { width:100px;height:100px; top:40%; right:5%; background:radial-gradient(circle,rgba(201,144,26,0.1),transparent 70%); --t:11s; --d:3s; }
+
+@keyframes drift { from{transform:translate(0,0) scale(1);} to{transform:translate(12px,18px) scale(1.08);} }
+
+/* Gold seal */
+.seal {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold2), var(--gold3));
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px;
+  position: relative;
+  box-shadow:
+    0 0 0 8px  rgba(201,144,26,0.12),
+    0 0 0 16px rgba(201,144,26,0.06),
+    0 20px 40px rgba(201,144,26,0.25);
+  animation: sealIn .8s cubic-bezier(.175,.885,.32,1.5) both;
+}
+@keyframes sealIn {
+  from { opacity:0; transform:scale(0.2) rotate(-20deg); }
+  to   { opacity:1; transform:scale(1) rotate(0deg); }
+}
+.seal-check {
+  width: 40px; height: 40px;
+  stroke: var(--ink); stroke-width: 3.5;
+  stroke-linecap: round; stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: drawCheck .5s .6s ease forwards;
+}
+@keyframes drawCheck { to { stroke-dashoffset: 0; } }
+
+.hero-kicker {
+  font-size: 11px; font-weight: 600; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold2);
+  margin-bottom: 14px;
+  animation: fadeUp .6s .4s ease both;
+}
+.hero-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(32px, 8vw, 44px);
+  font-weight: 700; color: #fff;
+  line-height: 1.15; margin-bottom: 16px;
+  animation: fadeUp .6s .5s ease both;
+}
+.hero-headline em {
+  font-style: italic; color: var(--gold2);
+}
+.hero-sub {
+  font-size: 15px; font-weight: 400;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7; margin-bottom: 32px;
+  animation: fadeUp .6s .6s ease both;
+}
+
+/* Delivery status pills */
+.status-row {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  animation: fadeUp .6s .7s ease both;
+}
+.status-pill {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px; padding: 10px 18px;
+  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+}
+.pulse-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #4ADE80;
+  box-shadow: 0 0 0 0 rgba(74,222,128,0.4);
+  animation: pulse-ring 1.8s ease infinite;
+}
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
+  70%  { box-shadow: 0 0 0 7px rgba(74,222,128,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute; bottom: 24px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  animation: fadeUp .6s 1.2s ease both;
+  z-index: 2;
+}
+.scroll-hint span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.3); font-weight: 500; }
+.scroll-arrow { width: 20px; height: 20px; border-right: 1.5px solid rgba(255,255,255,0.25); border-bottom: 1.5px solid rgba(255,255,255,0.25); transform: rotate(45deg); animation: bounce 1.5s ease infinite; }
+@keyframes bounce { 0%,100%{transform:rotate(45deg) translateY(0);} 50%{transform:rotate(45deg) translateY(4px);} }
+
+
+/* ═══════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════ */
+.main { max-width: 480px; margin: 0 auto; padding: 32px 16px 80px; }
+
+/* ─ Section heading ─ */
+.section-kicker {
+  font-size: 10px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 6px;
+}
+
+/* ─ Question card ─ */
+.q-card {
+  background: var(--offwhite);
+  border-radius: 28px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 32px var(--shadow), 0 1px 0 var(--border);
+  margin-bottom: 16px;
+  animation: fadeUp .5s .1s ease both;
+}
+.q-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--ink); line-height: 1.2; margin-bottom: 6px;
+}
+.q-body { font-size: 14px; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+
+.choice {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 20px; border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: var(--cream);
+  cursor: pointer; transition: all .25s ease;
+  margin-bottom: 10px; text-align: left;
+  position: relative; overflow: hidden;
+}
+.choice::after {
+  content: '';
+  position: absolute; inset: 0; border-radius: 20px;
+  background: linear-gradient(135deg, var(--indigobg), transparent);
+  opacity: 0; transition: opacity .25s;
+}
+.choice:hover { border-color: var(--indigol); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(79,70,229,0.1); }
+.choice:hover::after { opacity: 1; }
+.choice:active { transform: translateY(0); }
+.choice:last-child { margin-bottom: 0; }
+
+.ci {
+  width: 50px; height: 50px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0; position: relative; z-index: 1;
+}
+.ci-dark { background: var(--ink); }
+.ci-warm { background: var(--amberbg); }
+
+.cl { flex: 1; position: relative; z-index: 1; }
+.cl-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.cl-sub { font-size: 12px; color: var(--muted); line-height: 1.4; }
+.chev { color: var(--muted); font-size: 22px; flex-shrink: 0; position: relative; z-index: 1; transition: transform .2s; }
+.choice:hover .chev { transform: translateX(3px); }
+
+
+/* ─ Paths ─ */
+.path { display: none; }
+.path.on { display: block; }
+
+
+/* ═══════════════════════════════
+   PARENT PATH
+═══════════════════════════════ */
+
+/* Prudhvi quote banner */
+.prudhvi-banner {
+  border-radius: 24px;
+  background: var(--ink2);
+  padding: 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  margin-bottom: 16px;
+  position: relative; overflow: hidden;
+  animation: fadeUp .4s ease both;
+}
+.prudhvi-banner::before {
+  content: '';
+  position: absolute; top:-30px; right:-30px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,144,26,0.15), transparent 70%);
+}
+.pb-avatar {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(201,144,26,0.2);
+}
+.pb-content { flex: 1; position: relative; z-index: 1; }
+.pb-name { font-size: 12px; font-weight: 700; color: var(--gold2); margin-bottom: 2px; }
+.pb-role { font-size: 11px; color: rgba(255,255,255,0.4); margin-bottom: 10px; font-weight: 400; }
+.pb-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic;
+  color: rgba(255,255,255,0.88); line-height: 1.6;
+}
+
+/* iituitions story card */
+.story-card {
+  background: var(--offwhite);
+  border-radius: 28px;
+  padding: 28px 22px;
+  box-shadow: 0 4px 32px var(--shadow);
+  margin-bottom: 16px;
+  animation: fadeUp .4s .05s ease both;
+}
+.story-hl {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--ink); line-height: 1.2; margin-bottom: 12px;
+}
+.story-hl em { font-style: italic; color: var(--indigo); }
+.story-body {
+  font-size: 14px; color: #4B5563;
+  line-height: 1.8; margin-bottom: 22px;
+}
+.story-body strong { color: var(--ink); font-weight: 600; }
+
+/* Stat strip */
+.stat-strip {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 8px; margin-bottom: 20px;
+}
+.stat-tile {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 18px; padding: 16px 10px;
+  text-align: center;
+}
+.stat-n {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 700;
+  color: var(--ink); line-height: 1; margin-bottom: 4px;
+}
+.stat-l { font-size: 10px; color: var(--muted); font-weight: 500; line-height: 1.4; }
+
+/* Results */
+.results { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.res {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: linear-gradient(135deg, var(--cream2), var(--cream));
+  border: 1px solid var(--border);
+  border-radius: 18px; padding: 14px 16px;
+}
+.res-badge {
+  min-width: 44px; height: 44px;
+  border-radius: 12px; background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px; font-weight: 800;
+  color: var(--gold2); text-align: center; line-height: 1.3;
+}
+.res-name { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+.res-college { font-size: 11px; color: var(--indigo); font-weight: 600; margin-bottom: 4px; }
+.res-q { font-size: 12px; color: var(--muted); line-height: 1.55; font-style: italic; }
+
+/* Diff list */
+.diffs { list-style: none; }
+.diffs li {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+  font-size: 14px; color: var(--ink); line-height: 1.5; font-weight: 500;
+}
+.diffs li:last-child { border-bottom: none; }
+.dcheck {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--greenbg); color: var(--greentx);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+}
+
+/* ═══════════════════════════════
+   THE OFFER — HERO CARD
+═══════════════════════════════ */
+.offer-wrap { margin: 24px 0 16px; }
+
+.offer-pre {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 14px;
+}
+.offer-pre-line { flex: 1; height: 1px; background: var(--border); }
+.offer-pre-text { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+
+.offer-card {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(10,14,26,0.2),
+    0 0 0 1px rgba(201,144,26,0.15);
+  animation: fadeUp .4s .1s ease both;
+}
+
+/* Top dark portion */
+.offer-top {
+  background: var(--ink);
+  padding: 28px 24px 24px;
+  position: relative; overflow: hidden;
+}
+.offer-top::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,144,26,0.18), transparent 65%);
+}
+.offer-top::after {
+  content: '';
+  position: absolute; bottom: -40px; left: -20px;
+  width: 140px; height: 140px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,70,229,0.1), transparent 65%);
+}
+.offer-badge-wrap {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 16px; position: relative; z-index: 1;
+}
+.offer-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(201,144,26,0.15);
+  border: 1px solid rgba(201,144,26,0.3);
+  border-radius: 100px; padding: 5px 14px;
+  font-size: 11px; font-weight: 700; color: var(--gold2);
+  letter-spacing: .06em; text-transform: uppercase;
+}
+.badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold2); }
+.offer-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: #fff; line-height: 1.2; margin-bottom: 10px;
+  position: relative; z-index: 1;
+}
+.offer-title em { font-style: italic; color: var(--gold2); }
+.offer-desc {
+  font-size: 13px; color: rgba(255,255,255,0.65);
+  line-height: 1.7; position: relative; z-index: 1;
+}
+
+/* Includes list */
+.offer-includes {
+  list-style: none;
+  padding: 20px 24px;
+  background: var(--ink2);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.offer-includes li {
+  display: flex; gap: 10px; align-items: center;
+  padding: 8px 0; font-size: 13px;
+  color: rgba(255,255,255,0.82); line-height: 1.4;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.offer-includes li:last-child { border-bottom: none; }
+.inc-icon {
+  width: 26px; height: 26px; border-radius: 8px;
+  background: rgba(201,144,26,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; flex-shrink: 0;
+}
+
+/* Bottom CTA portion */
+.offer-bottom {
+  background: var(--cream);
+  padding: 24px;
+  border-top: 1px solid var(--border);
+}
+.price-row {
+  display: flex; align-items: flex-end; gap: 12px; margin-bottom: 18px;
+}
+.price-big {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 46px; font-weight: 700;
+  color: var(--ink); line-height: 1;
+}
+.price-meta { display: flex; flex-direction: column; gap: 4px; padding-bottom: 6px; }
+.price-was {
+  font-size: 16px; color: var(--muted);
+  text-decoration: line-through; font-weight: 400;
+}
+.price-badge {
+  background: var(--greenbg); color: var(--greentx);
+  font-size: 10px; font-weight: 800;
+  padding: 3px 10px; border-radius: 100px;
+  letter-spacing: .06em; text-transform: uppercase;
+  align-self: flex-start;
+}
+.main-cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 18px 24px;
+  border-radius: 18px; border: none;
+  background: linear-gradient(135deg, var(--gold), #D4A017, var(--gold2));
+  background-size: 200% 100%;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px; font-weight: 800;
+  text-decoration: none;
+  transition: all .3s ease;
+  letter-spacing: .01em;
+  position: relative; overflow: hidden;
+  box-shadow: 0 4px 24px rgba(201,144,26,0.35);
+}
+.main-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform .6s ease;
+}
+.main-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,144,26,0.45); }
+.main-cta:hover::before { transform: translateX(100%); }
+.main-cta:active { transform: translateY(0); }
+
+.cta-arrow { font-size: 18px; transition: transform .2s; }
+.main-cta:hover .cta-arrow { transform: translateX(4px); }
+
+.scarcity {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 12px; padding: 10px 14px;
+  background: var(--amberbg); border-radius: 12px;
+  font-size: 12px; color: var(--ambertx); font-weight: 500; line-height: 1.5;
+}
+.guarantee-row {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 10px; padding: 12px 16px;
+  background: var(--greenbg); border-radius: 14px;
+  font-size: 12px; color: var(--greentx); line-height: 1.5; font-weight: 500;
+}
+
+
+
+
+.back-btn {
+  display: block; text-align: center; margin-top: 16px; padding: 6px;
+  font-size: 13px; color: var(--muted); cursor: pointer;
+  transition: color .15s;
+}
+.back-btn:hover { color: var(--indigo); }
+
+
+/* ═══════════════════════════════
+   PARTNER PATH
+═══════════════════════════════ */
+.partner-card {
+  background: var(--offwhite);
+  border-radius: 28px; padding: 30px 24px;
+  box-shadow: 0 4px 32px var(--shadow);
+  animation: fadeUp .4s ease both;
+}
+.pc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 700;
+  color: var(--ink); margin-bottom: 8px; line-height: 1.2;
+}
+.pc-sub { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 22px; }
+
+.open-badge {
+  background: var(--amberbg); border: 1.5px solid #FDE68A;
+  border-radius: 16px; padding: 14px 18px;
+  font-size: 13px; color: var(--ambertx); line-height: 1.6;
+  margin-bottom: 22px;
+}
+.open-badge strong { font-weight: 700; color: var(--amber); }
+
+.fl { margin-bottom: 16px; }
+.fl label { display:block; font-size:12px; font-weight:700; color: var(--ink); margin-bottom: 7px; letter-spacing:.03em; }
+.fi {
+  width: 100%; padding: 14px 18px;
+  border-radius: 16px;
+  border: 1.5px solid var(--border);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px; color: var(--ink);
+  background: var(--cream); outline: none;
+  transition: border-color .2s, background .2s;
+  -webkit-appearance: none; appearance: none;
+}
+.fi:focus { border-color: var(--indigol); background: #fff; box-shadow: 0 0 0 4px rgba(79,70,229,0.07); }
+select.fi { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+textarea.fi { resize: vertical; min-height: 110px; line-height: 1.6; }
+
+.submit {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 17px;
+  border-radius: 18px; border: none;
+  background: var(--ink); color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; transition: all .2s ease; margin-top: 4px;
+  box-shadow: 0 4px 20px rgba(10,14,26,0.2);
+}
+.submit:hover { background: var(--ink2); transform: translateY(-1px); box-shadow: 0 8px 28px rgba(10,14,26,0.25); }
+.submit-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+.done { display:none; text-align:center; padding: 32px 0; }
+.done.on { display:block; }
+.done-emoji { font-size: 52px; margin-bottom: 16px; }
+.done-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:700; margin-bottom: 8px; color:var(--ink); }
+.done-sub { font-size:14px; color:var(--muted); line-height:1.65; }
+
+
+/* ═══════════════════════════════
+   FOOTER
+═══════════════════════════════ */
+.footer {
+  text-align: center; font-size: 12px; color: var(--muted);
+  margin-top: 40px; padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.footer a { color: var(--indigo); text-decoration: none; }
+
+
+/* ═══════════════════════════════
+   ANIMATIONS
+═══════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<!-- ════════ HERO ════════ -->
+<section class="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 
-<h1>🎉 Payment Successful!</h1>
+  <div class="hero-inner">
+    <div class="seal">
+      <svg class="seal-check" viewBox="0 0 40 40">
+        <path d="M8 20L17 29L32 12"/>
+      </svg>
+    </div>
 
-<p>Your payment has been received successfully.</p>
+    <p class="hero-kicker">Smart decision made</p>
 
-<p>You will receive your <b>IIT JEE PCM Notes</b> immediately on:</p>
+    <h1 class="hero-headline">
+      Your child's IIT<br>journey starts <em>now.</em>
+    </h1>
 
-<p><b>📧 Your Email</b></p>
-<p><b>📱 Your WhatsApp Number</b></p>
+    <p class="hero-sub">
+      ₹499 paid. 2,700+ pages of topper-style PCM notes<br>
+      are on their way to your email and WhatsApp.
+    </p>
 
-<p>Our system is processing your access. Please check your email or WhatsApp shortly.</p>
+    <div class="status-row">
+      <div class="status-pill"><span class="pulse-dot"></span> Email delivering</div>
+      <div class="status-pill"><span class="pulse-dot"></span> WhatsApp delivering</div>
+    </div>
+  </div>
 
-<p>Thank you for choosing <b>IIT JEE Notes by iiTuitions</b>.</p>
+  <div class="scroll-hint">
+    <span>Continue</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
 
-<p class="brand">iiTuitions • iiHub LLP</p>
 
-</div>
+<!-- ════════ MAIN ════════ -->
+<main class="main">
+
+  <!-- QUESTION -->
+  <div class="q-card" id="qcard">
+    <p class="section-kicker">One quick question</p>
+    <h2 class="q-title">Who is this for?</h2>
+    <p class="q-body">We'll point you to exactly the right next step based on your answer.</p>
+
+    <div class="choice" onclick="go('parent')" role="button">
+      <div class="ci ci-dark">🎓</div>
+      <div class="cl">
+        <div class="cl-title">My child or myself</div>
+        <div class="cl-sub">Preparing for IIT JEE — Grade 9 to 12</div>
+      </div>
+      <div class="chev">›</div>
+    </div>
+
+    <div class="choice" onclick="go('partner')" role="button">
+      <div class="ci ci-warm">🤝</div>
+      <div class="cl">
+        <div class="cl-title">I'm a teacher, tutor or want to partner</div>
+        <div class="cl-sub">Bought for students or exploring collaboration</div>
+      </div>
+      <div class="chev">›</div>
+    </div>
+  </div>
+
+
+  <!-- ════════ PARENT PATH ════════ -->
+  <div class="path" id="p-parent">
+
+    <!-- Prudhvi quote -->
+    <div class="prudhvi-banner">
+      <div class="pb-avatar">🎓</div>
+      <div class="pb-content">
+        <div class="pb-name">Prudhvi Chand — Founder, iituitions</div>
+        <div class="pb-role">AIR 367 · NIT Warangal · Former Physics HOD, Narayana</div>
+        <div class="pb-quote">"Notes are the foundation. But the students who crack IIT are the ones with a plan — not just content."</div>
+      </div>
+    </div>
+
+    <!-- Story card -->
+    <div class="story-card">
+      <h2 class="story-hl">The notes give your child content.<br><em>Now they need a plan.</em></h2>
+      <p class="story-body">
+        I built iituitions after watching 80 students share one class — only 10 could keep up. The rest studied hard but in the wrong direction. No batch can fix that. Only a <strong>plan built specifically for your child</strong> can.
+        <br><br>
+        Since 2018: <strong>100% 1-on-1 mentoring. Only IIT/NIT alumni. Max 50 students a year.</strong> Every child gets a custom roadmap, a dedicated mentor, and someone watching their mistakes before they become habits.
+      </p>
+
+      <div class="stat-strip">
+        <div class="stat-tile"><div class="stat-n">93%</div><div class="stat-l">Success rate</div></div>
+        <div class="stat-tile"><div class="stat-n">30+</div><div class="stat-l">AIR under 500</div></div>
+        <div class="stat-tile"><div class="stat-n">7 yrs</div><div class="stat-l">Since 2018</div></div>
+      </div>
+
+      <div class="results">
+        <div class="res">
+          <div class="res-badge">IIT<br>BOM</div>
+          <div>
+            <div class="res-name">Sri Charan</div>
+            <div class="res-college">IIT Bombay — Computer Science</div>
+            <div class="res-q">"Physics 45% → 96% with targeted mentoring. The roadmap changed everything."</div>
+          </div>
+        </div>
+        <div class="res">
+          <div class="res-badge">+86<br>MKS</div>
+          <div>
+            <div class="res-name">K. Nikshiptha</div>
+            <div class="res-college">IIT Rank 2252 — Score 92 → 178 in 4 months</div>
+            <div class="res-q">"I wasted a year following coaching guesswork. The personalised plan changed everything."</div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="diffs">
+        <li><span class="dcheck">✓</span> Personal IIT/NIT mentor assigned only to your child</li>
+        <li><span class="dcheck">✓</span> Custom roadmap built after free 1-on-1 assessment</li>
+        <li><span class="dcheck">✓</span> Every session recorded — revisit any concept anytime</li>
+        <li><span class="dcheck">✓</span> Weekly parent review calls — zero guesswork for you</li>
+        <li><span class="dcheck">✓</span> Progress guarantee + 30-day money-back</li>
+      </ul>
+    </div>
+
+    <!-- THE OFFER -->
+    <div class="offer-wrap">
+      <div class="offer-pre">
+        <div class="offer-pre-line"></div>
+        <div class="offer-pre-text">Recommended next step</div>
+        <div class="offer-pre-line"></div>
+      </div>
+
+      <div class="offer-card">
+        <!-- Dark top -->
+        <div class="offer-top">
+          <div class="offer-badge-wrap">
+            <div class="offer-badge"><span class="badge-dot"></span> Most popular among note buyers</div>
+          </div>
+          <h3 class="offer-title">Get your child's<br>personalised <em>90-day roadmap.</em></h3>
+          <p class="offer-desc">A senior IIT/NIT mentor reviews your child's weak chapters, calls within 24 hours, and builds a day-by-day plan built for your child alone — not generic advice.</p>
+        </div>
+
+        <!-- Includes -->
+        <ul class="offer-includes">
+          <li><span class="inc-icon">🗺</span> Personalised 90-day execution roadmap</li>
+          <li><span class="inc-icon">📞</span> Live 1-on-1 strategy call — IIT/NIT faculty</li>
+          <li><span class="inc-icon">🎯</span> Weak chapter attack plan from mock scores</li>
+          <li><span class="inc-icon">💡</span> 100 high-probability JEE 2026 questions</li>
+          <li><span class="inc-icon">⚠️</span> Common errors guide — stops 15–30 mark leaks</li>
+          <li><span class="inc-icon">⚡</span> Session booked within 24 hours</li>
+        </ul>
+
+        <!-- Price + CTA -->
+        <div class="offer-bottom">
+          <div class="price-row">
+            <div class="price-big">₹1,499</div>
+            <div class="price-meta">
+              <div class="price-was">₹5,000</div>
+              <div class="price-badge">One-time</div>
+            </div>
+          </div>
+
+          <a class="main-cta"
+             href="https://www.iituitions.com/mentorship"
+             target="_blank"
+             onclick="fbq('trackCustom','MentorshipClick')">
+            Get My Child's Roadmap <span class="cta-arrow">→</span>
+          </a>
+
+          <div class="scarcity">
+            ⚠️ <span>Only 8 slots available per week — each roadmap is personally built by your child's mentor</span>
+          </div>
+
+          <div class="guarantee-row">
+            🛡️ <span>Clarity guarantee — if you don't feel clearer in the first 15 minutes, we continue free.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-btn" onclick="back()">← Go back</div>
+  </div>
+
+
+  <!-- ════════ PARTNER PATH ════════ -->
+  <div class="path" id="p-partner">
+    <div class="partner-card">
+      <h2 class="pc-title">Partner with iituitions 🤝</h2>
+      <p class="pc-sub">We build partnerships, not just hire teachers. If you have expertise, a student network, or a vision for how we can work together — tell us. Prudhvi reads every proposal personally.</p>
+
+      <div class="open-badge">
+        <strong>Currently open:</strong> 1-on-1 JEE/NEET faculty, content collaborators, referral partners, coaching centre tie-ups. IIT/NIT alumni preferred. MBBS/PG for NEET Biology.
+      </div>
+
+      <div id="pform">
+        <div class="fl">
+          <label>How do you want to partner? *</label>
+          <select class="fi" id="t-type" onchange="ph(this.value)">
+            <option value="">Select type</option>
+            <option value="faculty">Teach 1-on-1 as faculty mentor</option>
+            <option value="referral">Refer students to iituitions</option>
+            <option value="content">Collaborate on content or notes</option>
+            <option value="centre">Coaching centre tie-up</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+        <div class="fl">
+          <label>Full Name *</label>
+          <input type="text" class="fi" id="t-name" placeholder="Your full name">
+        </div>
+        <div class="fl">
+          <label>WhatsApp Number *</label>
+          <input type="tel" class="fi" id="t-phone" placeholder="+91 98765 43210">
+        </div>
+        <div class="fl">
+          <label>Subject or Domain *</label>
+          <select class="fi" id="t-subject">
+            <option value="">Select subject</option>
+            <option>Physics</option>
+            <option>Chemistry</option>
+            <option>Mathematics</option>
+            <option>Biology (NEET)</option>
+            <option>Multiple Subjects</option>
+            <option>Not subject-specific</option>
+          </select>
+        </div>
+        <div class="fl">
+          <label>Experience *</label>
+          <select class="fi" id="t-exp">
+            <option value="">Select</option>
+            <option>1–3 years</option>
+            <option>3–5 years</option>
+            <option>5–10 years</option>
+            <option>10+ years</option>
+          </select>
+        </div>
+        <div class="fl">
+          <label>Educational Background</label>
+          <input type="text" class="fi" id="t-edu" placeholder="e.g. IIT Bombay, NIT Warangal, MBBS">
+        </div>
+        <div class="fl">
+          <label>Your Proposal *</label>
+          <textarea class="fi" id="t-proposal" placeholder="Tell us your idea — what you bring and what you're looking for. Be specific."></textarea>
+        </div>
+        <button class="submit" onclick="send()">📩 Send Proposal to Prudhvi</button>
+        <p class="submit-note">Prudhvi reads every proposal and responds within 24 hours</p>
+      </div>
+
+      <div class="done" id="pdone">
+        <div class="done-emoji">🤝</div>
+        <div class="done-title">Proposal received!</div>
+        <div class="done-sub">Prudhvi will WhatsApp you personally within 24 hours.<br>Looking forward to building something great together.</div>
+      </div>
+    </div>
+
+    <div class="back-btn" onclick="back()">← Go back</div>
+  </div>
+
+  <footer class="footer">
+    <strong>iituitions</strong> — IITUITIONSHUB LLP &nbsp;·&nbsp;
+    <a href="https://www.iituitions.com">iituitions.com</a> &nbsp;·&nbsp;
+    <a href="https://wa.me/918801661368">WhatsApp support</a>
+  </footer>
+
+</main>
+
+<script>
+function go(p){
+  document.getElementById('qcard').style.display='none';
+  document.querySelectorAll('.path').forEach(x=>x.classList.remove('on'));
+  document.getElementById('p-'+p).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  fbq('trackCustom', p==='parent'?'ParentPath':'PartnerPath');
+}
+function back(){
+  document.querySelectorAll('.path').forEach(x=>x.classList.remove('on'));
+  document.getElementById('qcard').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+const phtxt={
+  faculty:"Tell us your subjects, availability, and the kind of students you'd like to teach.",
+  referral:"Tell us about your student network — grades, city, approximate numbers.",
+  content:"Describe the content you can create — notes, videos, question banks, etc.",
+  centre:"Tell us about your centre — location, students, subjects, and the tie-up you have in mind.",
+  other:"Describe your idea freely. No format needed."
+};
+function ph(v){ const el=document.getElementById('t-proposal'); if(phtxt[v]) el.placeholder=phtxt[v]; }
+function send(){
+  const v=(id)=>document.getElementById(id).value.trim();
+  if(!v('t-name')||!v('t-phone')||!v('t-type')||!v('t-subject')||!v('t-exp')||!v('t-proposal')){
+    alert('Please fill in all required fields.'); return;
+  }
+  const m=[
+    'New Partner Proposal — iitjeenote.com','',
+    'Name: '+v('t-name'),'Phone: '+v('t-phone'),
+    'Type: '+v('t-type'),'Subject: '+v('t-subject'),
+    'Experience: '+v('t-exp'),'Background: '+(v('t-edu')||'Not provided'),
+    '','Proposal:',v('t-proposal')
+  ].map(l=>encodeURIComponent(l)).join('%0A');
+  window.open('https://wa.me/919010031000?text='+m,'_blank');
+  document.getElementById('pform').style.display='none';
+  document.getElementById('t-type').closest('.fl').style.display='none';
+  document.getElementById('pdone').classList.add('on');
+  fbq('trackCustom','PartnerProposalSubmitted');
+}
+</script>
 
 </body>
 </html>
